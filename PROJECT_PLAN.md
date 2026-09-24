@@ -229,11 +229,11 @@ Create the repository layout, environment configuration contract, Docker Compose
 
 **Definition of done:** The documented commands work on Windows with Docker Desktop and the selected Python and Node versions; configuration loads from environment variables; no runtime secrets or user files are tracked.
 
-### Milestone 2: Backend Core and Database Layer
+### Milestone 2: Backend Core, Database, and Authentication Layer
 
-Implement FastAPI startup, settings, structured errors, health/readiness checks, SQLAlchemy engine/session wiring, initial models, and migration strategy.
+Implement FastAPI startup, settings, structured errors, health/readiness checks, SQLAlchemy engine/session wiring, initial models, migration strategy, email authentication, password hashing, short-lived access tokens, rotating refresh tokens, revocation, protected-route dependencies, and ownership checks.
 
-**Definition of done:** The backend starts locally, PostgreSQL connectivity is verified, schema creation/migration is repeatable, and unit tests cover settings validation and database session behavior.
+**Definition of done:** The backend starts locally, PostgreSQL connectivity is verified, schema creation/migration is repeatable, authentication and refresh-token security tests pass, protected resources enforce ownership, frontend auth routes handle session state, and no passwords or raw refresh tokens are persisted.
 
 ### Milestone 3: Secure Intake and Text Extraction
 

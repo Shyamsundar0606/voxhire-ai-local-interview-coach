@@ -71,4 +71,4 @@ npm run type-check
 npm run build
 ```
 
-Milestone 2 adds the SQLAlchemy 2 model registry, initial application schema, and repeatable Alembic upgrade/downgrade workflow. Authentication, AI integrations, resume upload, speech processing, and interview workflows remain intentionally out of scope.
+Milestone 2 adds the SQLAlchemy 2 model registry, initial application schema, repeatable Alembic workflow, email registration/login/logout, protected current-user access, JWT access tokens, rotating HttpOnly refresh tokens, revocation, and ownership-policy checks. AI integrations, resume upload, speech processing, and interview workflows remain intentionally out of scope.

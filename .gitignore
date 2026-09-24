@@ -11,6 +11,7 @@ __pycache__/
 .ruff_cache/
 .mypy_cache/
 .venv/
+.venv*/
 venv/
 
 # Next.js
@@ -22,14 +23,24 @@ frontend/coverage/
 # Runtime data and local storage
 storage/*
 !storage/.gitkeep
+uploads/*
+!uploads/.gitkeep
+*.wav
+*.mp3
+*.webm
 *.log
-
-# IDE and OS
-.vscode/settings.json
-.idea/
-.DS_Store
-Thumbs.db
+*.db
+*.sqlite
+*.sqlite3
 
 # Test artifacts
 playwright-report/
 test-results/
+coverage.xml
+htmlcov/
+
+# IDE and operating system
+.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db

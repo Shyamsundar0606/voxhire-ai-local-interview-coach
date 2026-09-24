@@ -4,6 +4,7 @@ from pydantic import ValidationError
 from sqlalchemy import create_engine, inspect
 
 os.environ.setdefault("DATABASE_URL", "sqlite+pysqlite:///:memory:")
+os.environ.setdefault("JWT_SECRET_KEY", "test-secret-key-with-at-least-32-characters")
 
 from app.core.config import Settings
 from app.db.base import Base

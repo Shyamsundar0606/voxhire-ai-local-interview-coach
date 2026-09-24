@@ -1,7 +1,21 @@
+"use client";
+
 import { BackendStatus } from "@/components/BackendStatus";
+import { AuthGate } from "@/components/AuthGate";
+import { useAuth } from "@/components/AuthProvider";
 import Link from "next/link";
 
 export default function Home() {
+  return (
+    <AuthGate>
+      <Dashboard />
+    </AuthGate>
+  );
+}
+
+function Dashboard() {
+  const { user, logout } = useAuth();
+
   return (
     <div className="app-shell">
       <aside className="sidebar">
@@ -22,6 +36,8 @@ export default function Home() {
         <div className="sidebar-footer">
           <span className="privacy-badge">Private by default</span>
           <p>Runs on this machine. Your practice data stays local.</p>
+          <p className="sidebar-user">{user?.email}</p>
+          <button className="logout-button" type="button" onClick={() => void logout()}>Log out</button>
         </div>
       </aside>
 

@@ -6,6 +6,7 @@ from app.models.interview_session import InterviewSession
 from app.models.job_description import JobDescription
 from app.models.report import Report
 from app.models.resume import Resume
+from app.models.refresh_token import RefreshToken
 
 __all__ = [
     "Answer",
@@ -16,4 +17,5 @@ __all__ = [
     "JobDescription",
     "Report",
     "Resume",
+    "RefreshToken",
 ]
